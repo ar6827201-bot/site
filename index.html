@@ -1,12 +1,321 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Primeiro Site</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veste Aura | Moda Feminina</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #40352e;
+    background: #faf8f4;
+}
+
+header {
+    background: #fff;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 12px #0000000c;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 27px;
+    letter-spacing: 3px;
+    color: #8b654c;
+}
+
+nav a {
+    text-decoration: none;
+    color: #40352e;
+    margin-left: 25px;
+    font-size: 13px;
+}
+
+nav a:hover {
+    color: #a77b5d;
+}
+
+.hero {
+    min-height: 540px;
+    display: flex;
+    align-items: center;
+    padding: 70px 10%;
+    background: linear-gradient(90deg, #e9dfd2 45%, #c9b39f);
+}
+
+.hero-content {
+    max-width: 520px;
+}
+
+.hero small {
+    letter-spacing: 4px;
+    color: #88694f;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(42px, 7vw, 68px);
+    font-weight: normal;
+    margin: 22px 0;
+}
+
+.hero p {
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #80604a;
+    color: white;
+    padding: 15px 27px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    background: #5e4434;
+}
+
+section {
+    padding: 75px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+
+.section-title p {
+    color: #88796c;
+    font-size: 14px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product {
+    background: white;
+    padding-bottom: 22px;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    display: block;
+}
+
+.product h3 {
+    font-family: Georgia, serif;
+    font-size: 21px;
+    margin: 18px 0 8px;
+}
+
+.price {
+    color: #987455;
+    margin-bottom: 15px;
+}
+
+.product button {
+    padding: 11px 20px;
+}
+
+.about {
+    background: #eee6dc;
+    text-align: center;
+}
+
+.about p {
+    max-width: 680px;
+    margin: 20px auto 0;
+    line-height: 1.9;
+    color: #66584d;
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    line-height: 2;
+}
+
+footer {
+    background: #40352e;
+    color: #fff;
+    text-align: center;
+    padding: 30px 15px;
+    font-size: 13px;
+    line-height: 2;
+}
+
+#cart {
+    color: #8b654c;
+    font-size: 13px;
+}
+
+@media(max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: 420px;
+        padding: 45px 8%;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .product img {
+        height: 380px;
+    }
+}
+</style>
 </head>
+
 <body>
-    <h1>Bem-vindo ao meu site!</h1>
-    <p>Esse é meu primeiro site criado no GitHub.</p>
+
+<header>
+    <div class="logo">VESTE AURA</div>
+
+    <nav>
+        <a href="#inicio">INÍCIO</a>
+        <a href="#colecao">COLEÇÃO</a>
+        <a href="#sobre">SOBRE</a>
+        <a href="#contato">CONTATO</a>
+    </nav>
+
+    <div id="cart">🛍️ Sacola: 0</div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+    <div class="hero-content">
+        <small>NOVA COLEÇÃO • 2026</small>
+        <h1>Vista sua essência.</h1>
+        <p>
+            Descubra uma moda que combina elegância,
+            conforto e personalidade. Sua melhor versão
+            começa com aquilo que você veste.
+        </p>
+        <a href="#colecao" class="btn">CONHEÇA A COLEÇÃO</a>
+    </div>
+</section>
+
+<section id="colecao">
+    <div class="section-title">
+        <h2>Nossa coleção</h2>
+        <p>Peças escolhidas para acompanhar seu estilo.</p>
+    </div>
+
+    <div class="products">
+
+        <article class="product">
+            <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=700" alt="Vestido feminino">
+            <h3>Vestido Elegance</h3>
+            <p class="price">R$ 189,90</p>
+            <button class="btn" onclick="addCart()">ADICIONAR À SACOLA</button>
+        </article>
+
+        <article class="product">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=700" alt="Look feminino casual">
+            <h3>Look Urban</h3>
+            <p class="price">R$ 159,90</p>
+            <button class="btn" onclick="addCart()">ADICIONAR À SACOLA</button>
+        </article>
+
+        <article class="product">
+            <img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?w=700" alt="Moda feminina">
+            <h3>Blazer Aura</h3>
+            <p class="price">R$ 219,90</p>
+            <button class="btn" onclick="addCart()">ADICIONAR À SACOLA</button>
+        </article>
+
+    </div>
+</section>
+
+<section class="about" id="sobre">
+    <div class="section-title">
+        <h2>Sobre a Veste Aura</h2>
+        <p>Mais do que roupas, uma forma de expressão.</p>
+    </div>
+
+    <p>
+        A Veste Aura nasceu com o propósito de valorizar
+        a individualidade de cada mulher. Acreditamos que
+        a moda vai além das tendências: ela representa
+        personalidade, confiança e liberdade.
+        Nossa missão é oferecer peças que façam você
+        se sentir bem em todos os momentos.
+    </p>
+</section>
+
+<section class="contact" id="contato">
+    <div class="section-title">
+        <h2>Entre em contato</h2>
+        <p>Vamos conversar?</p>
+    </div>
+
+    <p>📧 contato@vest eaura.com.br</p>
+    <p>📱 Instagram: @vest eaura</p>
+    <p>Moda feminina com personalidade e autenticidade.</p>
+</section>
+</main>
+
+<footer>
+    <div class="logo" style="color:#e5cbb3">VESTE AURA</div>
+    <p>Vista sua essência. Seja sua melhor versão.</p>
+    <p>© 2026 Veste Aura. Site fictício desenvolvido para fins educacionais.</p>
+</footer>
+
+<script>
+let cart = 0;
+
+function addCart() {
+    cart++;
+    document.getElementById("cart").innerText =
+        "🛍️ Sacola: " + cart;
+
+    alert("Produto adicionado à sua sacola!");
+}
+</script>
+
 </body>
 </html>
